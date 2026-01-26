@@ -32,14 +32,14 @@
     Modify the configuration sections below to suit your needs.
     
     STEP 1: CHOOSE YOUR SCOPE
-    ─────────────────────────
+    -------------------------
     • $UserConfigs  = Settings applied to EACH USER (HKCU/HKU)
                       Use for: User preferences, app settings per user
     • $MachineConfigs = Settings applied to the MACHINE (HKLM)
                       Use for: System-wide policies, machine settings
     
     STEP 2: ADD A CONFIGURATION GROUP
-    ──────────────────────────────────
+    ----------------------------------
     Copy this template and fill in your values:
     
     @{
@@ -52,7 +52,7 @@
     }
     
     STEP 3: ADD SETTINGS (choose one action type per setting)
-    ─────────────────────────────────────────────────────────
+    ---------------------------------------------------------
     
     ACTION: SET (create or update a value) - This is the default if Action is omitted
     @{ Name = "ValueName"; Type = "String"; Value = "MyValue" }
@@ -65,7 +65,7 @@
     @{ Action = "DeleteKey"; Name = "SubKeyName" }
     
     SUPPORTED TYPES FOR SET ACTION
-    ──────────────────────────────
+    ------------------------------
     • String       = Text value                    Example: "Hello World"
     • DWord        = 32-bit number (0-4294967295)  Example: 1
     • QWord        = 64-bit number                 Example: 9999999999
@@ -74,7 +74,7 @@
     • MultiString  = Multiple strings, pipe-sep   Example: "Value1|Value2|Value3"
     
     EXAMPLES
-    ────────
+    --------
     Example 1: Set a simple string value in HKCU
         $UserConfigs = @(
             @{
@@ -124,7 +124,7 @@
         )
     
     STEP 4: SET SCRIPT MODE
-    ───────────────────────
+    -----------------------
     At the bottom of this configuration section:
     • $runRemediation = $false  → Detection only (reports issues, no changes)
     • $runRemediation = $true   → Remediation (fixes issues)
