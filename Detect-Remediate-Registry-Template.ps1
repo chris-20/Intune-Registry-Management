@@ -159,28 +159,6 @@ $UserConfigs = @(
         )
     }
     @{
-        Name        = "How To Get There From Here"
-        Description = "Danish podcast about Microsoft 365 by Christian and Martin"
-        BasePath    = "SOFTWARE\HowToGetThereFromHere"
-        Settings    = @(
-            @{
-                Name  = "PodcastURL"
-                Type  = "String"
-                Value = "https://howtogettherefromhere.com"
-            }
-            @{
-                Name  = "Hosts"
-                Type  = "String"
-                Value = "Christian and Martin"
-            }
-            @{
-                Name  = "Topic"
-                Type  = "String"
-                Value = "Microsoft 365"
-            }
-        )
-    }
-    @{
         Name        = "Outlook Font Settings"
         Description = "Verdana 10pt as default font for compose, reply, and plain text"
         BasePath    = "SOFTWARE\Microsoft\Office\16.0\Common\MailSettings"
