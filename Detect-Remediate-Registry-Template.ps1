@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    Intune Proactive Remediation - Generic Registry Management Template
+    Intune Remediation - Generic Registry Management Template
 .DESCRIPTION
     Self-contained script for detecting and remediating registry settings.
     Runs as SYSTEM and can modify both machine and per-user registry settings.
@@ -13,7 +13,7 @@
     2. Modify the CONFIGURATION section below for your use case
     3. Save as detection script ($runRemediation = $false)
     4. Save as remediation script ($runRemediation = $true)
-    5. Upload both to Intune Proactive Remediations
+    5. Upload both to Intune Remediations
 .NOTES
     Author: Martin Bengtsson
     Version: 3.1
@@ -28,7 +28,7 @@
 <#
 .QUICK START GUIDE
     
-    This script manages registry settings for Intune Proactive Remediations.
+    This script manages registry settings for Intune Remediations.
     Modify the configuration sections below to suit your needs.
     
     STEP 1: CHOOSE YOUR SCOPE
