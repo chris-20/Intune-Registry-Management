@@ -137,6 +137,28 @@
 # ============ USER CONFIGURATIONS (HKCU / HKU) ============
 $UserConfigs = @(
     @{
+        Name        = "imab.dk Settings"
+        Description = "Sample per-user registry configuration"
+        BasePath    = "SOFTWARE\imab.dk"
+        Settings    = @(
+            @{
+                Name  = "BlogURL"
+                Type  = "String"
+                Value = "https://www.imab.dk"
+            }
+            @{
+                Name  = "Author"
+                Type  = "String"
+                Value = "Martin Bengtsson"
+            }
+            @{
+                Name  = "AwesomeLevel"
+                Type  = "DWord"
+                Value = 100
+            }
+        )
+    }
+    @{
         Name        = "Outlook Font Settings"
         Description = "Verdana 10pt as default font for compose, reply, and plain text"
         BasePath    = "SOFTWARE\Microsoft\Office\16.0\Common\MailSettings"
@@ -178,19 +200,24 @@ $UserConfigs = @(
 # ============ MACHINE CONFIGURATIONS (HKLM) ============
 $MachineConfigs = @(
     @{
-        Name        = "Windows Paths"
-        Description = "Standard Windows installation paths (example - always compliant)"
-        BasePath    = "SOFTWARE\Microsoft\Windows\CurrentVersion"
+        Name        = "imab.dk Settings"
+        Description = "Sample machine-wide registry configuration"
+        BasePath    = "SOFTWARE\imab.dk"
         Settings    = @(
             @{
-                Name  = "ProgramFilesDir"
+                Name  = "BlogURL"
                 Type  = "String"
-                Value = "C:\Program Files"
+                Value = "https://www.imab.dk"
             }
             @{
-                Name  = "CommonFilesDir"
+                Name  = "Author"
                 Type  = "String"
-                Value = "C:\Program Files\Common Files"
+                Value = "Martin Bengtsson"
+            }
+            @{
+                Name  = "AwesomeLevel"
+                Type  = "DWord"
+                Value = 100
             }
         )
     }
