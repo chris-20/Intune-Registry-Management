@@ -124,6 +124,15 @@ $MachineConfigs = @(
 )
 ```
 
+## Version
+
+**Current version: 3.2**
+
+| Version | Changes |
+|---------|---------|
+| 3.2 | Removed HKCU fallback when no users logged on. Script now skips HKCU gracefully and continues with HKLM. |
+| 3.1 | Added Set, Delete, and DeleteKey actions. Clean multi-line formatting. |
+
 ## Author
 
 Martin Bengtsson - [imab.dk](https://www.imab.dk)
