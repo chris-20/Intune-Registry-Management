@@ -13,7 +13,7 @@ The only PowerShell script you need to manage registry on Windows devices using 
 - Works with **Microsoft Entra ID** and traditional AD joined devices
 - All registry types: String, DWord, QWord, Binary, ExpandString, MultiString
 - Three actions: **Set**, **Delete**, **DeleteKey**
-- **Dual logging** - Output to Intune portal and local log file with automatic rotation
+- **Dual logging** - Output to Intune portal and local log file
 
 ## Usage
 
@@ -134,7 +134,7 @@ $MachineConfigs = @(
 
 | Version | Changes |
 |---------|---------|
-| 3.3 | Added Write-Log function for dual output (Intune portal + local log file). Configurable log file name and size-based rotation. |
+| 3.3 | Added local log file for complete audit trail. Dual output to Intune portal and log file. |
 | 3.2 | Removed HKCU fallback when no users logged on. Script now skips HKCU gracefully and continues with HKLM. |
 | 3.1 | Added Set, Delete, and DeleteKey actions. Clean multi-line formatting. |
 
@@ -148,7 +148,6 @@ Script output is written to both:
 
 ```powershell
 $LogFileName = "Intune-Registry-Management-MyScript"  # Name your log file
-$MaxLogSizeMB = 4                                      # Rotate when log exceeds this size
 ```
 
 ### Log format
